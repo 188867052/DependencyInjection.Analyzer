@@ -19,7 +19,6 @@ public void ConfigureServices(IServiceCollection services)
 ....
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
-    app.UseMvc();
     app.UseMvc(routes =>
     {
         routes.MapDependencyInjectionAnalyzer(); // Add
