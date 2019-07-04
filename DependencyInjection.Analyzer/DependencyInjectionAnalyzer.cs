@@ -7,14 +7,14 @@ namespace DependencyInjection.Analyzer
 {
     public interface IDependencyInjectionAnalyzer
     {
-        IEnumerable<DependencyInjectionInfo> GetDependencyInjectionInfo();
+        IList<DependencyInjectionInfo> GetDependencyInjectionInfo();
     }
 
     internal class DependencyInjectionAnalyzer : IDependencyInjectionAnalyzer
     {
         internal const string DefaultRoute = "/services";
 
-        public IEnumerable<DependencyInjectionInfo> GetDependencyInjectionInfo()
+        public IList<DependencyInjectionInfo> GetDependencyInjectionInfo()
         {
             return DependencyInjectionAnalyzerExtention.ServiceCollection;
         }
@@ -56,5 +56,16 @@ namespace DependencyInjection.Analyzer
                 return writer.ToString();
             }
         }
+    }
+
+    public class DependencyInjectionInfo
+    {
+        internal int Index { get; set; }
+
+        internal string ImplementationType { get; set; }
+
+        internal string Lifetime { get; set; }
+
+        internal string ServiceType { get; set; }
     }
 }
