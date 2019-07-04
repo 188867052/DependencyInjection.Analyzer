@@ -7,13 +7,17 @@
     <PackageIconUrl></PackageIconUrl>
     <PackageProjectUrl>https://nuget.org/packages/DependencyInjection.Analyzer</PackageProjectUrl>
     <RepositoryType>https://github.com</RepositoryType>
-    <Description>DependencyInjection.Analyzer</Description>
+    <Description>Display all the DependencyInjection services in Mvc or Api project, developers can view all of the services through the browser, include Lifetime(Singleton, Transient, Scoped), ServiceType(IHttpContextFactory, ILoggerFactory...) and 
+ImplementationType(Microsoft.AspNetCore.Http.HttpContextFactory, 	Microsoft.Extensions.Logging.LoggerFactory...) and other User-defined services, this is very convenient if you are an architect, for beginners, it is also very helpful.</Description>
     <Copyright>Harry Cheng</Copyright>
-    <PackageReleaseNotes>DependencyInjection.Analyzer</PackageReleaseNotes>
+    <PackageReleaseNotes>update the .NETCoreApp 2.1 to 2.2 to be consistent with the version of Microsoft.AspNetCore.Mvc and Microsoft.AspNetCore.Razor</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>2.2.0.0</AssemblyVersion>
-    <FileVersion>2.2.0.0</FileVersion>
-    <Version>2.2.0</Version>
+    <AssemblyVersion>2.2.1.0</AssemblyVersion>
+    <FileVersion>2.2.1.0</FileVersion>
+    <Version>2.2.1</Version>
+    <Authors>Harry Cheng</Authors>
+    <Company>Harry Cheng</Company>
+    <PackageTags>DependencyInjection, NETCore, Mvc, Api, DI, service</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
