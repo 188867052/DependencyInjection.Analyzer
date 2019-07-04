@@ -5,6 +5,11 @@ using System.Text.Encodings.Web;
 
 namespace DependencyInjection.Analyzer
 {
+    public interface IDependencyInjectionAnalyzer
+    {
+        IEnumerable<DependencyInjectionInfo> GetDependencyInjectionInfo();
+    }
+
     internal class DependencyInjectionAnalyzer : IDependencyInjectionAnalyzer
     {
         internal const string DefaultRoute = "/services";
