@@ -25,13 +25,15 @@ namespace DependencyInjection.Analyzer
             {
                 DependencyInjectionInfo serviceCollection = new DependencyInjectionInfo
                 {
+                    ImplementationFactory = item.ImplementationFactory?.Target?.GetType().FullName,
                     ImplementationType = item.ImplementationType?.Name,
                     Namespace = item.ImplementationType?.Namespace,
+                    Instance = item.ImplementationInstance?.GetType()?.Name,
                     Lifetime = item.Lifetime.ToString(),
                     ServiceType = item.ServiceType.Name,
                     ServiceAssembly = item.ServiceType?.Assembly?.ManifestModule.Name,
                     Index = services.IndexOf(item) + 1,
-                   
+
                 };
 
                 list.Add(serviceCollection);

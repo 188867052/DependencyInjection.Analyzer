@@ -26,3 +26,8 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     });
 }
 ```
+## View Services via Browser
+```
+Eg. input http://localhost:27634/routes.html
+```
+![screenshot](https://github.com/188867052/DependencyInjection.Analyzer/blob/master/DependencyInjection.Analyzer/services.png)

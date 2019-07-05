@@ -26,6 +26,7 @@ namespace DependencyInjection.Analyzer
             head.Content.AppendHtml(HtmlContent.TagHelper("th", nameof(DependencyInjectionInfo.Lifetime)));
             head.Content.AppendHtml(HtmlContent.TagHelper("th", nameof(DependencyInjectionInfo.ServiceType)));
             head.Content.AppendHtml(HtmlContent.TagHelper("th", nameof(DependencyInjectionInfo.ImplementationType)));
+            head.Content.AppendHtml(HtmlContent.TagHelper("th", nameof(DependencyInjectionInfo.Instance)));
             head.Content.AppendHtml(HtmlContent.TagHelper("th", nameof(DependencyInjectionInfo.Namespace)));
 
             var thead = HtmlContent.TagHelper("thead", head);
@@ -34,15 +35,20 @@ namespace DependencyInjection.Analyzer
             foreach (var item in infos)
             {
                 var tr = HtmlContent.TagHelper("tr");
-                tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Index.ToString()));
+                tr.Content.AppendHtml(HtmlContent.TagHelper("td",new TagHelperAttribute("class", "text-muted"), item.Index.ToString()));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Lifetime));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.ServiceType));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.ImplementationType));
+                tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Instance));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Namespace));
                 tbody.Content.AppendHtml(tr);
             }
 
-            TagHelperAttribute attributes = new TagHelperAttribute("class", "table table-bordered table-striped with-check table-hover");
+            TagHelperAttributeList attributes = new TagHelperAttributeList
+            {
+                { "class", "table table-bordered table-striped table-hover" },
+                { "style", "font-size: 15px" },
+            };
             var table = HtmlContent.TagHelper("table", attributes, thead, tbody);
             using (var writer = new StringWriter())
             {
@@ -60,6 +66,8 @@ namespace DependencyInjection.Analyzer
 
     public class DependencyInjectionInfo
     {
+        public string Instance { get; set; }
+        public string ImplementationFactory { get; internal set; }
         internal string Namespace { get; set; }
 
         internal int Index { get; set; }
