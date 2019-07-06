@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -71,25 +69,6 @@ namespace DependencyInjection.Analyzer
                 context.RouteData = routeData;
                 await this.defaultRouter.RouteAsync(context);
             }
-        }
-    }
-
-    public class RouteController : Controller
-    {
-        private readonly IDependencyInjectionAnalyzer serviceAnalyzer;
-
-        public RouteController(IDependencyInjectionAnalyzer serviceAnalyzer)
-        {
-            this.serviceAnalyzer = serviceAnalyzer;
-        }
-
-        [HttpGet]
-        [Route(DependencyInjectionAnalyzer.DefaultRoute)]
-        public IActionResult ShowAllServices()
-        {
-            var value = this.serviceAnalyzer.GetDependencyInjectionInfo();
-            var html = DependencyInjectionAnalyzer.GetHtml(value);
-            return this.Content(html, "text/html", Encoding.UTF8);
         }
     }
 }

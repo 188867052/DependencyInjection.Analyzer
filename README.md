@@ -36,7 +36,6 @@ Eg. input https://localhost:44336/services
 
 * [ASP.NET Core 2.2](https://docs.microsoft.com/en-us/aspnet/core)
 * [C# 7.3](https://docs.microsoft.com/en-us/dotnet/csharp)
-* [Route.Generator](https://github.com/188867052/Route.Generator)
 * [DependencyInjection](https://github.com/aspnet/DependencyInjection)
 
 ## Other containers with Microsoft.Extensions.DependencyInjection

@@ -16,7 +16,7 @@
     <Version>2.2.1.1</Version>
     <Authors>Harry Cheng</Authors>
     <Company>Harry Cheng</Company>
-    <PackageTags>DependencyInjection, NETCore, Mvc, Api, DI, service</PackageTags>
+    <PackageTags>DependencyInjection, NETCore, Mvc, Api, DI, Service IOC AOP</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
