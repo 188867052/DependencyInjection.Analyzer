@@ -21,10 +21,10 @@ namespace DependencyInjection.Analyzer
         [Route(DependencyInjectionAnalyzer.DefaultRoute)]
         public IActionResult ShowAllServices()
         {
-            var value = this.serviceAnalyzer.GetDependencyInjectionInfo();
             this.memoryCache.TryGetValue("DependencyInjection", out string html);
             if (string.IsNullOrEmpty(html))
             {
+                var value = this.serviceAnalyzer.GetDependencyInjectionInfo();
                 html = DependencyInjectionAnalyzer.GetHtml(value);
                 this.memoryCache.Set("DependencyInjection", html);
             }
