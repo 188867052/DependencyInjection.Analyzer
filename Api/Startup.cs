@@ -36,10 +36,7 @@ namespace Api
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc(routes =>
-            {
-                routes.MapDependencyInjectionAnalyzer();
-            });
+            app.UseMvc();
         }
     }
 }
