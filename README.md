@@ -1,9 +1,6 @@
 | Package | NuGet Stable | Downloads |
 | ------- | ------------ | --------- |
-| [DependencyInjection.Analyzer](https://www.nuget.org/packages/DependencyInjection.Analyzer/) 
-| [![DependencyInjection.Analyzer](https://img.shields.io/nuget/v/DependencyInjection.Analyzer.svg)](https://www.nuget.org/packages/DependencyInjection.Analyzer/) 
-| [![DependencyInjection.Analyzer](https://img.shields.io/nuget/dt/DependencyInjection.Analyzer.svg)](https://www.nuget.org/packages/DependencyInjection.Analyzer/) 
-| 
+| [DependencyInjection.Analyzer](https://www.nuget.org/packages/DependencyInjection.Analyzer/) | [![DependencyInjection.Analyzer](https://img.shields.io/nuget/v/DependencyInjection.Analyzer.svg)](https://www.nuget.org/packages/DependencyInjection.Analyzer/) | [![DependencyInjection.Analyzer](https://img.shields.io/nuget/dt/DependencyInjection.Analyzer.svg)](https://www.nuget.org/packages/DependencyInjection.Analyzer/) | 
 ### Install NuGet package
 - [NuGet Gallery | DependencyInjection.Analyzer](https://www.nuget.org/packages/DependencyInjection.Analyzer)
 
