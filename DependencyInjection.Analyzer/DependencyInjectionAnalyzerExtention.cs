@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DependencyInjection.Analyzer
@@ -10,6 +11,7 @@ namespace DependencyInjection.Analyzer
         public static IServiceCollection AddDependencyInjectionAnalyzer(this IServiceCollection services)
         {
             services.AddSingleton<IDependencyInjectionAnalyzer, DependencyInjectionAnalyzer>();
+            services.AddSingleton<IMemoryCache, MemoryCache>();
             IList<DependencyInjectionInfo> list = new List<DependencyInjectionInfo>();
             foreach (var item in services)
             {
