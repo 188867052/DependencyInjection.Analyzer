@@ -35,7 +35,7 @@ namespace DependencyInjection.Analyzer
             foreach (var item in infos)
             {
                 var tr = HtmlContent.TagHelper("tr");
-                tr.Content.AppendHtml(HtmlContent.TagHelper("td",new TagHelperAttribute("class", "text-muted"), item.Index.ToString()));
+                tr.Content.AppendHtml(HtmlContent.TagHelper("td", new TagHelperAttribute("class", "text-muted"), item.Index.ToString()));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Lifetime));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.ServiceType));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.ImplementationType));
@@ -68,16 +68,16 @@ namespace DependencyInjection.Analyzer
     {
         public string Instance { get; set; }
         public string ImplementationFactory { get; internal set; }
-        internal string Namespace { get; set; }
+        public string Namespace { get; set; }
 
-        internal int Index { get; set; }
+        public int Index { get; set; }
 
-        internal string ImplementationType { get; set; }
+        public string ImplementationType { get; set; }
 
-        internal string Lifetime { get; set; }
+        public string Lifetime { get; set; }
 
-        internal string ServiceType { get; set; }
+        public string ServiceType { get; set; }
 
-        internal string ServiceAssembly { get; set; }
+        public string ServiceAssembly { get; set; }
     }
 }
