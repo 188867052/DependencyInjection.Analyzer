@@ -11,9 +11,9 @@
     <Copyright>Harry Cheng</Copyright>
     <PackageReleaseNotes>upgrade</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>3.0.0.2</AssemblyVersion>
-    <FileVersion>3.0.0.2</FileVersion>
-    <Version>3.0.0.2</Version>
+    <AssemblyVersion>3.0.0.3</AssemblyVersion>
+    <FileVersion>3.0.0.3</FileVersion>
+    <Version>3.0.0.3</Version>
     <Authors>Harry Cheng</Authors>
     <Company>Harry Cheng</Company>
     <PackageTags>DependencyInjection, NETCore, Mvc, Api, DI, Service IOC AOP</PackageTags>

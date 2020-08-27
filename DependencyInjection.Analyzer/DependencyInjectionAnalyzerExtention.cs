@@ -21,7 +21,7 @@ namespace DependencyInjection.Analyzer
                     ImplementationType = item.ImplementationType?.Name,
                     Namespace = item.ImplementationType?.Namespace,
                     Instance = item.ImplementationInstance?.GetType()?.Name,
-                    Lifetime = item.Lifetime.ToString(),
+                    Lifetime = item.Lifetime,
                     ServiceType = item.ServiceType.Name,
                     ServiceAssembly = item.ServiceType?.Assembly?.ManifestModule.Name,
                     Index = services.IndexOf(item) + 1,

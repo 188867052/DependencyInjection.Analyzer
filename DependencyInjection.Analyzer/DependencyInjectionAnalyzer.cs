@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Encodings.Web;
@@ -36,7 +37,7 @@ namespace DependencyInjection.Analyzer
             {
                 var tr = HtmlContent.TagHelper("tr");
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", new TagHelperAttribute("class", "text-muted"), item.Index.ToString()));
-                tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Lifetime));
+                tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Lifetime.ToString()));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.ServiceType));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.ImplementationType));
                 tr.Content.AppendHtml(HtmlContent.TagHelper("td", item.Instance));
@@ -74,7 +75,7 @@ namespace DependencyInjection.Analyzer
 
         public string ImplementationType { get; set; }
 
-        public string Lifetime { get; set; }
+        public ServiceLifetime Lifetime { get; set; }
 
         public string ServiceType { get; set; }
 
