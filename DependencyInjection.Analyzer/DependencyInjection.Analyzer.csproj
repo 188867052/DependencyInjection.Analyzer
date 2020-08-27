@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/188867052/DependencyInjection.Analyzer</RepositoryUrl>
     <PackageIconUrl></PackageIconUrl>
@@ -11,9 +11,9 @@
     <Copyright>Harry Cheng</Copyright>
     <PackageReleaseNotes>upgrade</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>3.0.0.1</AssemblyVersion>
-    <FileVersion>3.0.0.1</FileVersion>
-    <Version>3.0.0.1</Version>
+    <AssemblyVersion>3.0.0.2</AssemblyVersion>
+    <FileVersion>3.0.0.2</FileVersion>
+    <Version>3.0.0.2</Version>
     <Authors>Harry Cheng</Authors>
     <Company>Harry Cheng</Company>
     <PackageTags>DependencyInjection, NETCore, Mvc, Api, DI, Service IOC AOP</PackageTags>
