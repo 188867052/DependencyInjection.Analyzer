@@ -29,7 +29,7 @@ Eg. input https://localhost:44336/services
 
 ## Technologies
 
-* [ASP.NET Core 6.0](https://docs.microsoft.com/en-us/aspnet/core)
+* [ASP.NET 6.0](https://docs.microsoft.com/en-us/aspnet/core)
 * [C# 10](https://docs.microsoft.com/en-us/dotnet/csharp)
 * [DependencyInjection](https://github.com/aspnet/DependencyInjection)
 
